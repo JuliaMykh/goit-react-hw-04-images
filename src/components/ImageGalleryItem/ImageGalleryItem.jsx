@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { ImageGalleryLi, ImageGalleryItemImg } from './ImageGalleryItem.styled';
 import { Modal } from "components/Modal/Modal";
 
-export const ImageGalleryItem = ({ webformatURL, tags, largeImageURL}) => {
+export const ImageGalleryItem = ({ webformatURL, tags="Image", largeImageURL}) => {
     const [showModal, setShowModal] = useState(false);
 
     const togglenModal = () => {
@@ -22,7 +22,6 @@ export const ImageGalleryItem = ({ webformatURL, tags, largeImageURL}) => {
         <Modal image={largeImageURL} tags={tags} onClose={togglenModal} />
       )}
         </>
-        
     )
 };
 

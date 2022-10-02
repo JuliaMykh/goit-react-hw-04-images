@@ -18,21 +18,3 @@ export const ModalDiv = styled.div`
   max-height: calc(100vh - 24px);
 `;
 
-export const Button = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: inherit;
-  font-weight: 700;
-  color: #6a5a5a;
-  background-color: transparent;
-
-  width: 30px;
-  height: 20px;
-  padding: 0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
- 
-`;

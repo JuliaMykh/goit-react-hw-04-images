@@ -18,12 +18,9 @@ export const ImageGallery = ({images}) => {
 };
 
 ImageGallery.propTypes = {
-  images: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      description: PropTypes.string.isRequired,
-      smallImage: PropTypes.string.isRequired,
-      largeImage: PropTypes.string.isRequired,
     })
-  ).isRequired,
+  ),
 };

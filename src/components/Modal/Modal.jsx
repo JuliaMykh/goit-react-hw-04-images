@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
-import React, { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import React from 'react';
 
-import { Overlay, ModalDiv, Button } from './Modal.styled';
+import { Overlay, ModalDiv } from './Modal.styled';
 
-// const modalRoot = document.querySelector('#modal-root');
-
-export const Modal = ({ image, tags, onClose }) => {
+export const Modal = ({ image, tags="Image", onClose }) => {
 
   const handleClickByEscape = e => {
     if (e.code === 'Escape') {
@@ -26,10 +23,7 @@ export const Modal = ({ image, tags, onClose }) => {
 
     return (
       <Overlay onClick={handleClickOnBackdrop}>
-        <ModalDiv >
-          
-            {/* <Button type="button" onClick={onClose}>Close</Button> */}
-         
+        <ModalDiv >  
           <img
             src={image}
             alt={tags}
@@ -40,9 +34,8 @@ export const Modal = ({ image, tags, onClose }) => {
    );
 };
 
-
 Modal.propTypes = {
     onClose: PropTypes.func.isRequired,
     image: PropTypes.string.isRequired,
-    tags: PropTypes.string,
+    tags: PropTypes.string.isRequired,
 }
